@@ -20,30 +20,40 @@ import NavbarMenuItem from "./NavbarMenuItem"
 function Navbar() {
   return (
     <>
-      <nav className="grid grid-cols-3 border-2 border-gray-800 bg-gray-800 text-white">
-        <div className="flex justify-center items-center">
-          <h4>
+      <nav className="grid grid-cols-3 border-2 bg-gray-800 text-white border-b border-gray-600 pb-1">
+        {/* subscribe section */}
+        <section className="flex justify-center items-center">
+          <a href="#" className="font-bungee text-sm">
             subscribe<span>{">>"}</span>
-          </h4>
-        </div>
-        <div className="flex justify-center items-center  ">
+          </a>
+        </section>
+        {/* end of subscribe */}
+
+        {/* logo section */}
+        <section className="flex justify-center items-center  ">
           <StaticImage src="../../../images/logo3.png" alt="Criacao Pop" />
-        </div>
-        <div className="flex justify-center items-center">
+        </section>
+        {/* end of logo */}
+
+        {/* socials seciton */}
+        <section className="flex justify-center items-center">
           <Socials icon={faTwitter} />
           <Socials icon={faFacebook} />
           <Socials icon={faInstagram} />
           <Socials icon={faSpotify} />
           <Socials icon={faYoutube} />
           <Socials icon={faTwitch} />
-        </div>
+        </section>
+        {/* end of socials */}
       </nav>
-      <ul className="navbar-nav mx-auto">
+
+      {/* nav links */}
+      <nav className="flex flex-row justify-center items-center border-2border-gray-800 bg-gray-800 text-white py-3">
         <NavbarMenuItem title="Cinema" />
         <NavbarMenuItem title="Series" />
         <NavbarMenuItem title="Musica" />
         <NavbarMenuItem title="Cultura" />
-      </ul>
+      </nav>
     </>
   )
 }
